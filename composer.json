@@ -1,12 +1,12 @@
 {
-  "name": "aquila/cipher",
-  "description": "Aquila Cipher Encryption Library",
+  "name": "aquilainnovations/aquilacipher",
+  "description": "Aquila Cipher PHP library using a remote encryption API.",
   "type": "library",
   "license": "MIT",
   "authors": [
     {
-      "name": "Aswin Sadhasivam",
-      "email": "mail@aquilainnovations.in"
+      "name": "EvilDeadReturns",
+      "email": "your-email@example.com"
     }
   ],
   "autoload": {
