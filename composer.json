@@ -1,18 +1,18 @@
 {
-  "name": "aquilainnovations/aquilacipher",
-  "description": "Aquila Cipher PHP library using a remote encryption API.",
-  "type": "library",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "EvilDeadReturns",
-      "email": "mail@aquilainnovations.in"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "Aquila\\Cipher\\": "src/"
-    }
-  },
-  "require": {}
+    "name": "aquilainnovations/aquilacipher",
+    "description": "Aquila Cipher PHP library using a remote encryption API.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aquilainnovations\\Aquilacipher\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "aswinsadhasivam",
+            "email": "mail@aquilainnovations.in"
+        }
+    ],
+    "require": {}
 }
