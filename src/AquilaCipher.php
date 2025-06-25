@@ -1,5 +1,5 @@
 <?php
-namespace Aquila\Cipher;
+namespace aquilainnovations\aquilacipher;
 
 class AquilaCipher
 {
