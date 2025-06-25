@@ -1,4 +1,3 @@
-<?php 
 namespace Aquila\Cipher;
 
 class AquilaCipher
@@ -50,4 +49,3 @@ class AquilaCipher
         return $data['result'] ?? null;
     }
 }
-?>
