@@ -22,10 +22,15 @@ class AquilaCipher
      * @param string $text
      * @return string|null
      */
-    public static function decrypt(string $text): ?string
+  /**  public static function decrypt(string $text): ?string
     {
         return self::callApi('decrypt', $text);
     }
+**/
+    public static function decrypt(string $encryptedText, string $expectedValue): ?string
+{
+    return self::callApi('decrypt', $encryptedText, $expectedValue);
+}
 
     /**
      * Internal function to communicate with the remote API.
