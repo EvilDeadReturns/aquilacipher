@@ -15,7 +15,10 @@ class AquilaCipher
     {
         return self::callApi('encrypt', $text);
     }
-
+    public static function enc(string $text): ?string
+    {
+        return self::callApi('encrypt', $text);
+    }
     /**
      * Decrypts the given text using remote API.
      *
@@ -31,7 +34,10 @@ class AquilaCipher
 {
     return self::callApi('decrypt', $encryptedText, $expectedValue);
 }
-
+    public static function dec(string $text): ?string
+    {
+        return self::callApi('decrypt', $text);
+    }
     /**
      * Internal function to communicate with the remote API.
      *
