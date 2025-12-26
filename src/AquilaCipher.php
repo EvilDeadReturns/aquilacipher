@@ -30,14 +30,14 @@ class AquilaCipher
         return self::callApi('decrypt', $text);
     }
 **/
-    // public static function decrypt(string $encryptedText, string $expectedValue): ?string
-    // {
-    //     return self::callApi('decrypt', $encryptedText, $expectedValue);
-    // }
-    // public static function dec(string $text): ?string
-    //     {
-    //         return self::callApi('decrypt', $text);
-    //     }
+    public static function decrypt(string $encryptedText, string $expectedValue): ?string
+    {
+        return self::callApi('decrypt', $encryptedText, $expectedValue);
+    }
+    public static function dec(string $text): ?string
+        {
+            return self::callApi('decrypt', $text);
+        }
     /**
      * Internal function to communicate with the remote API.
      *
