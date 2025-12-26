@@ -15,31 +15,37 @@ class AquilaCipher
     {
         return self::callApi('encrypt', $text);
     }
+
     public static function enc(string $text): ?string
     {
         return self::callApi('encrypt', $text);
     }
+
     /**
-     * Decrypts the given text using remote API.
+     * Verifies if the encrypted text matches the expected plain text.
      *
-     * @param string $text
-     * @return string|null
+     * @param string $encryptedText
+     * @param string $plainText
+     * @return bool|null Returns true/false if matched, or null on error
      */
-  /**  public static function decrypt(string $text): ?string
+    public static function match(string $encryptedText, string $plainText): ?bool
     {
-        return self::callApi('decrypt', $text);
-    }
-**/
-    public static function decrypt(string $encryptedText, string $expectedValue): ?string
-    {
-        return self::callApi('decrypt', $encryptedText, $expectedValue);
-    }
-    public static function dec(string $text): ?string
-        {
-            return self::callApi('decrypt', $text);
+        $url = self::$apiUrl . '?action=match&encrypted=' . urlencode($encryptedText) . '&plain=' . urlencode($plainText);
+
+        $response = @file_get_contents($url);
+
+        if ($response === false) {
+            error_log("AquilaCipher: Failed to reach API for match.");
+            return null;
         }
+
+        $data = json_decode($response, true);
+
+        return isset($data['match']) ? (bool)$data['match'] : null;
+    }
+
     /**
-     * Internal function to communicate with the remote API.
+     * Internal function to communicate with the remote API for encryption.
      *
      * @param string $action
      * @param string $text
